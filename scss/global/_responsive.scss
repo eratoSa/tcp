@@ -1,0 +1,59 @@
+/* Reponsive Variables ---------------------------------------*/
+
+$wdl: 1378px; /*width-desktop-large*/
+$wdm: 1218px; /*width-desktop-medium*/
+$wds: 978px;  /*width- desktop-small*/
+$wt: 640px;   /*width-tablet*/
+$wm: 100%;     /*width-mobile*/
+$rp: 15;      /*responsive-padding*/
+
+
+@mixin breakpoint($class) {
+
+  @if $class == desktop-medium {
+    @media (max-width: $wdl + $rp) { @content; }
+  }
+
+  @if $class == desktop-small {
+    @media (max-width: $wdm + $rp) { @content; }
+  }
+
+  @if $class == tablet {
+    @media (max-width: $wds + $rp) { @content; }
+  }
+
+  @if $class == mobile {
+    @media (max-width: $wt + $rp) { @content; }
+  }
+
+}
+
+.container {
+  @include box_treatment;
+  width: 100%;
+  max-width: $wdm;
+  height: auto;
+  position: relative;
+  margin: auto;
+  @include clearfix;
+
+  &:after{
+    position: relative;
+  }
+
+  @include breakpoint(desktop-medium) {
+    max-width: $wdm;
+  }
+
+  @include breakpoint(desktop-small) {
+    max-width: $wds;
+  }
+
+  @include breakpoint(tablet) {
+    max-width: $wt;
+  }
+
+  @include breakpoint(mobile) {
+    max-width: $wm;
+  }
+}

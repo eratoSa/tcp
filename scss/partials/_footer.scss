@@ -1,0 +1,52 @@
+#footer{
+  background: #eee;
+  padding: 35px 55px;
+  width: 100%;
+  overflow: hidden;
+  @include box-treatment;
+  p {
+    display: inline-block;
+    color: #505050;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .fmenu {
+    display: inline-block;
+    li{
+      display: inline-block;
+      padding: 0 15px;
+      a {
+        font-weight: 400;
+        color: #569fc1;
+        font-size: 18px;
+      }
+    }
+  }
+  > span {
+    display: block;
+    font-size: 12px;
+    color: #505050;
+    line-height: 16px;
+    font-weight: 700;
+  }
+  a.flink{
+    float: left;
+    height:70px;
+    line-height: 70px;
+    text-align: center;
+    width: 140px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #fff;
+    background: #cecece;
+    &.first {
+      background: #c3c3c3;
+    }
+  }
+  @include breakpoint(mobile){
+    padding-top: 0;
+    p { text-align: center; display: block; margin-bottom: 5px; }
+    ul li, ul { text-align: center; padding-left: 0;  display: block; margin: 5px 0; }
+    a.flink { width: 50%; }
+  }
+}

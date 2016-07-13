@@ -1,0 +1,146 @@
+.hero-homepage{
+  height:600px;
+  @include box_treatment;
+  padding: 103px 0 43px;
+  width: 100%;
+  background: url(../images/backgrounds/home-hero-bg.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  cursor: move;
+
+  .hero-slide{
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 0 10px;
+    width: 600px !important;
+    -webkit-box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.53);
+    -moz-box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.53);
+    box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.53);
+    .slide-content{
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 5;
+      @include box-treatment;
+      padding: 20px 30px;
+      .date{
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        width: 60px;
+        padding-bottom: 55px;
+        background: #fff;
+        color: #455a64;
+        font-size: 33px;
+        font-weight: 700;
+        line-height: 55px;
+        text-align: center;
+        span {
+          display: block;
+          background: $secondary-color;
+          color: #fff;
+          text-transform: uppercase;
+          font-size: 18px;
+          height: 30px;
+          line-height: 30px;
+        }
+      }
+      h2, h2 a{
+        width: 75%;
+        font-size: 28px;
+        font-weight: 300;
+        color: #fff;
+        line-height: 1.2;
+        text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.9);
+        font-family: 'Roboto', sans-serif;
+        margin-bottom: 0;
+      }
+      h3, h3 a{
+        width: 75%;
+        color: #7f7f7f;
+        font-size: 12px;
+        font-weight: 600;
+        font-style: italic;
+      }
+      .actions {
+        opacity: 0;
+        z-index: -1;
+        position: absolute;
+        bottom: 20px;
+        width: calc(100% - 45px);
+        .buy-ticket {
+          float: right;
+          margin-top: -2.5px;
+        }
+      }
+      &:hover {
+        background: rgba(0, 0, 0, 0.7);
+        .actions {
+          z-index: 10;
+          display: block;
+          opacity:1;
+        }
+
+      }
+    }
+    &.min-slide{
+      width: 340px !important;
+    }
+
+  }
+  @include breakpoint(tablet) {
+    height:330px;
+    padding-bottom: 5px;
+
+    .hero-slide,  .hero-slide.min-slide {
+      height:210px;
+      width: 280px !important;
+      overflow: hidden;
+      img{
+        display: block;
+        width: 100%;
+      }
+      .slide-content {
+        padding: 10px;
+        h2, h2 a {
+          font-size: 18px;
+        }
+        .date{
+          width: 30px;
+          top: 13px;
+          right: 10px;
+          padding-bottom: 30px;
+          font-size: 18px;
+          line-height: 30px;
+          span{
+            height:15px;
+            line-height: 15px;
+            font-size: 10px;
+          }
+        }
+        .actions {
+          width: calc(100% - 20px);
+          .btn.large {
+            width: 70px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 12px;
+          }
+          .buy-ticket {
+            height:30px;
+            line-height: 30px;
+            width: 86px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+}
+  @include breakpoint(mobile) {
+    padding-top: 160px;
+    height: 400px;
+  }
+
+}

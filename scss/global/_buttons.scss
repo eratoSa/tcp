@@ -1,0 +1,65 @@
+a.btn,
+.btn {
+  @include transition(300ms);
+  display: inline-block;
+  white-space: nowrap;
+  text-align: center;
+  width: 125px;
+  height:30px;
+  line-height: 30px;
+  border-radius: 2px;
+  font-weight: 600;
+  @include font-size(15);
+  @include breakpoint(mobile){
+    width: 100%;
+    @include box-treatment;
+  }
+  &.blue {
+    background: $secondary-color;
+    color: #fff;
+  }
+  &.white {
+    color: #3b3e41;
+    background: #fff;
+  }
+  &.large{
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 3px;
+  }
+}
+.login-btn {
+  @include transition(300ms);
+  display: inline-block;
+  white-space: nowrap;
+  color: #fff;
+  @include font-size(15);
+  line-height: 18px;
+  margin-right: 30px;
+  font-weight: 400;
+  &:before{
+    content: 'e';
+    font-family: 'tcp';
+    height: 18px;
+    margin-right: 10px;
+  }
+  &:hover {
+    color: #fff;
+  }
+}
+.buy-ticket {
+  display: inline-block;
+  background: url("../images/icons/get-ticket.svg") 50% 50% no-repeat;
+  background-size: cover;
+  text-align: center;
+  line-height: 55px;
+  color: #000;
+  font-size: 15px;
+  font-weight: 600;
+  width: 150px;
+  height: 55px;
+  &:hover{
+    color: #000;
+  }
+}

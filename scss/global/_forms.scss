@@ -1,0 +1,351 @@
+/* =============================================================================
+	FORMS
+	========================================================================== */
+form, fieldset {
+	margin: 0;
+	padding: 0;
+	border-style: none;
+}
+
+label {
+	cursor: pointer;
+}
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+	cursor: pointer;
+	-webkit-appearance: none;
+	*overflow: visible;
+}
+
+input {
+	outline: none;
+}
+
+/*Iphone Border Radius Fix*/
+input {
+	-webkit-border-radius: 0;
+}
+
+textarea {
+	-webkit-border-radius: 0;
+}
+
+input[type="text"], input[type="email"], input[type="search"], input[type="password"], input[type="tel"], textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none; /* mobile firefox too! */
+}
+
+button[disabled], input[disabled] {
+	cursor: default;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+button {
+	padding: 0
+}
+
+input[type="checkbox"], input[type="radio"] {
+	width: 15px;
+	height: 16px;
+	padding: 0;
+	margin: 0;
+}
+
+input, textarea, select {
+	font: 100% $brand-font-1, $brand-font-2, Arial, Helvetica, sans-serif;
+	vertical-align: middle;
+	color: $secondary-color;
+}
+
+textarea {
+	resize: vertical;
+	margin: 0;
+	padding: 0;
+	overflow: auto;
+	vertical-align: top;
+	outline: none;
+}
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+input:-moz-placeholder {
+	color: $input-color;
+}
+
+input::-moz-placeholder {
+	color: $input-color;
+	opacity: 1;
+}
+
+input::-webkit-input-placeholder {
+	color: $input-color;
+}
+
+input:-ms-input-placeholder {
+	color: $input-color;
+}
+
+input::placeholder {
+	color: $input-color;
+}
+
+input:focus:-moz-placeholder {
+	color: transparent;
+}
+
+input:focus::-moz-placeholder {
+	color: transparent;
+}
+
+input:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+
+input:focus:-ms-input-placeholder {
+	color: transparent;
+}
+
+input:focus::placeholder {
+	color: transparent;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+input[type="checkbox"],
+.styledCheckbox,
+.styledRadio {
+	background-position: center center;
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	padding: 0 20px;
+	@include font-size(13);
+	height: 40px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	color: $input-color;
+	border: 1px solid $input-color;
+	max-width: 100%;
+	width: 100%;
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="tel"]:hover,
+textarea:hover,
+input[type="email"]:hover,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+	border-color: $primary-color;
+}
+
+textarea {
+	height: 100px;
+	resize: none;
+	padding: 10px 20px;
+}
+
+.wrap {
+	position: relative;
+}
+
+.wrap:after {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 30px;
+	height: 18px;
+	content: "\e000";
+	color: $input-color;
+	margin: -9px 0 0 13px;
+	font-family: 'cherry-font';
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+.wrap:hover:after {
+	color: $primary-color;
+}
+
+.wrap input[type="text"],
+.wrap input[type="password"],
+.wrap textarea {
+	padding: 0 0 0 40px;
+}
+
+.input-user:after {
+	content: "\e000";
+}
+
+.input-pass:after {
+	content: "\e000";
+}
+
+.styledCheckbox,
+.styledRadio {
+	width: 12px;
+	height: 12px;
+	border: 1px solid $font-color;
+	padding: 0;
+	background: #fff;
+}
+
+.styledRadio {
+	@include border-radius(50%);
+}
+
+.styledCheckbox:hover,
+.styledRadio:hover {
+	background-image: none !important;
+	background: $primary-color;
+	border-color: $primary-color;
+}
+
+.styledCheckbox.checked,
+.styledRadio.checked {
+	background: $primary-color;
+	border-color: $primary-color;
+	position: relative;
+
+}
+
+.styledCheckbox.checked:after {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 10px;
+	height: 10px;
+	margin: -5px 0 0 -7px;
+	line-height: 10px;
+	color: $primary-color;
+}
+
+.styledRadio.checked:after {
+	position: absolute;
+	content: '';
+	top: 50%;
+	left: 50%;
+	width: 10px;
+	height: 10px;
+	margin: -5px 0 0 -5px;
+	line-height: 10px;
+	background: $primary-color;
+	@include border-radius(50%);
+}
+
+.jspContainer {
+	overflow: hidden;
+	position: relative;
+}
+
+.jspPane {
+	position: absolute;
+	width: 290px !important;
+}
+
+.jspVerticalBar {
+	position: absolute;
+	top: 0;
+	right: 0px;
+	width:4px;
+	height: 100%;
+	opacity: 0.8;
+}
+
+.jspHorizontalBar {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height:2px;
+}
+
+.jspVerticalBar *,
+.jspHorizontalBar * {
+	margin: 0;
+	padding: 0;
+}
+*
+.jspCap {
+	display: none;
+}
+
+.jspHorizontalBar .jspCap {
+	float: left;
+}
+
+.jspTrack {
+	position: relative;
+}
+
+.jspDrag {
+	background: #d18241;
+	position: relative;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+	border-radius: 2px;
+}
+
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag {
+	float: left;
+	height: 100%;
+}
+
+.jspArrow {
+	text-indent: -20000px;
+	display: block;
+	cursor: pointer;
+}
+
+.jspArrow.jspDisabled {
+	cursor: default;
+}
+
+.jspVerticalBar .jspArrow {
+	height: 16px;
+}
+
+.jspHorizontalBar .jspArrow {
+	width: 16px;
+	float: left;
+	height: 100%;
+}
+
+.jspVerticalBar .jspArrow:focus {
+	outline: none;
+}
+
+.jspCorner {
+	background: #eeeef4;
+	float: left;
+	height: 100%;
+}
+
+* html .jspCorner {
+	margin: 0 -3px 0 0;
+}
+

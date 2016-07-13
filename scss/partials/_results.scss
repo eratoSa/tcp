@@ -1,0 +1,161 @@
+.results {
+  background: #eee;
+  ul.result-list {
+    width: 100%;
+    padding: 0 0 40px 53px;
+    @include box-treatment;
+    list-style: none;
+    overflow: hidden;
+    margin:0;
+    li{
+      float: left;
+      position: relative;
+      border-radius: 3px;
+      overflow: hidden;
+      margin-right: 40px;
+      margin-top: 40px;
+      height: 278px;
+      box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.53);
+      .image-block {
+        height: 100%;
+      }
+      img {
+        display: block;
+        height: 100%;
+      }
+
+      h3 {
+        font-size: 16px;
+        color: #121212;
+        margin-top: 0;
+        clear: both;
+      }
+      h4 {
+        font-size: 12px;
+        color: #7f7f7f;
+      }
+      p, a {
+        font-size: 15px;
+        line-height: 16.8px;
+        color: #4e4e4e;
+      }
+      .description {
+        @include box-treatment;
+        padding: 25px 22px;
+      }
+
+      &.user-card {
+        width: 400px;
+        .image-block {
+          position: relative;
+          width: 195px;
+          float: left;
+          height:100%;
+
+          .info {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.45);
+            @include box-treatment;
+            padding: 10px;
+            .ava-holder {
+              height: 50px;
+              width: 50px;
+              background: #eee;
+              float: left;
+              margin-right: 15px;
+            }
+            p {
+              font-size: 12px;
+              line-height: 20px;
+              color: #fff;
+              margin: 0;
+            }
+          }
+        }
+        .description {
+          float: left;
+          width: 205px;
+          a {
+            color: #4486f8;
+            float: right;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .theatre-card {
+      width: 235px;
+      .description{
+        padding-top: 0;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        height: 163px;
+        background: #7d56c1;
+        bottom: 0;
+        .ava-holder {
+          height: 70px;
+          width: 70px;
+          background: #eee;
+          float: left;
+          margin-top: -50px;
+          margin-bottom: 10px;
+        }
+        h3, a, p { color: #fff; font-size: 14px; }
+        h4 { color: #bb9def; padding: 0; margin: 0; }
+        .slider {
+          position: absolute;
+          right: 0;
+          bottom: 10px;
+        }
+      }
+    }
+    .troup-card{
+      width: 235px;
+      > img {
+        position: absolute;
+        width: 40px;
+        height:40px;
+        bottom: 14px;
+        right: 14px;
+      }
+      .members {
+        position: absolute;
+        bottom: 5px;
+        left: 15px;
+      }
+      .description{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #57c505;
+        h3{
+          color: #fff;
+          font-size: 14px;
+        }
+        h4 {
+          color: #aff37d;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+  @include breakpoint(tablet){
+    .result-list {
+      padding-left: 0 !important;
+      li{
+        display: block;
+         float: none !important;
+        margin: 12px auto !important;
+      }
+      .poster {
+        display: none;
+      }
+      .user-card { display: none; }
+    }
+  }
+}

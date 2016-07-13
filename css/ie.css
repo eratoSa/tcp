@@ -1,0 +1,13 @@
+#application-form .fields{
+	display: block;
+}
+#application-form .fields.two > .field,
+#application-form .fields.two > .fields,
+#application-form .fields.two .field.narrow,
+#application-form .fields.two .field.wide{
+	width: 100%;
+	padding: 0;
+}
+#application-form .field .fields .field:first-child {
+	margin: 0 0 1em;
+}
